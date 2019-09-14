@@ -20,11 +20,11 @@ var button = d3.select("filter-btn")
 
 function handleClick() {
     var date = d3.select("#datetime").property("value");
-    let filteredData = tableData;
+    let dateInput = tableData;
     if (date) {
-      filteredData = filteredData.filter(row => row.datetime === date);
+      dateInput = dateInput.filter(row => row.datetime === date);
     }
-    buildTable(filteredData);
+    buildTable(dateInput);
   }
   d3.selectAll("#filter-btn").on("click", handleClick);
   buildTable(tableData);
