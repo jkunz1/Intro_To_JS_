@@ -24,9 +24,9 @@ function handleClick() {
     if (date) {
       dateInput = dateInput.filter(row => row.datetime === date);
     }
-    buildTable(dateInput);
+    displayData(dateInput);
   }
   d3.selectAll("#filter-btn").on("click", handleClick);
-  buildTable(tableData);
+  displayData(tableData);
 
 
